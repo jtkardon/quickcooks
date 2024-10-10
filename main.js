@@ -7,6 +7,7 @@ function addFood (event){
     console.log('YES')
 
     const foodItem = document.querySelector('#newIngredient').value;
+    console.log('Yes again')
     if (foodItem) {
         console.log('HERE')
         foodList.push(foodItem);
