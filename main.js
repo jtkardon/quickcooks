@@ -13,11 +13,25 @@ function addFood (event){
         const listItem = document.createElement('li');
         listItem.textContent = foodItem;
         finalList.appendChild(listItem);
+        const remButton = document.createElement('button');
+        remButton.onclick = removeFood(remButton);
+        remButton.textContent = "Remove";
+        listItem.append(remButton)
     }
-    updateRecipies()
+    updateRecipes()
 }
 
-async function updateRecipies(){
+function removeFood(event, clicked) {
+    event.preventDefault();
+    console.log('NO')
+
+
+    clicked.parentNode.remove()
+
+    updateRecipes()
+}
+
+async function updateRecipes(){
     recipes = []
     for (const ingredient of foodList) {
         try {
