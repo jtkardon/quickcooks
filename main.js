@@ -17,6 +17,7 @@ function addFood (event){
         remButton.onclick = removeFood(remButton);
         remButton.textContent = "Remove";
         listItem.append(remButton)
+        console.log('HERE')
     }
     updateRecipes()
 }
