@@ -15,6 +15,7 @@ function addFood (event){
         finalList.appendChild(listItem);
         listItem.addEventListener('click', removeFood, false)
     }
+    document.querySelector('#newIngredient').value = '';
     updateRecipes()
 }
 
