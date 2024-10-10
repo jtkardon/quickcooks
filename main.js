@@ -16,9 +16,9 @@ function addFood (event){
         listItem.textContent = foodItem;
         finalList.appendChild(listItem);
         console.log('HERE2')
-        const remButton = document.createElement('button');
+        const remButton = document.createElement('BUTTON');
         console.log('HERE3')
-        remButton.onclick = removeFood(event, remButton);
+        remButton.onclick = removeFood();
         remButton.textContent = "Remove";
         listItem.append(remButton)
         console.log('HERE4')
@@ -26,12 +26,12 @@ function addFood (event){
     updateRecipes()
 }
 
-function removeFood(event, clicked) {
+function removeFood(event) {
     event.preventDefault();
     console.log('NO')
 
 
-    clicked.parentNode.remove()
+    event.target.parentNode.remove()
 
     updateRecipes()
 }
