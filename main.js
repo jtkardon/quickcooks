@@ -18,7 +18,7 @@ function addFood (event){
         console.log('HERE2')
         const remButton = document.createElement('button');
         console.log('HERE3')
-        remButton.onclick = removeFood(remButton);
+        remButton.onclick = removeFood(event, remButton);
         remButton.textContent = "Remove";
         listItem.append(remButton)
         console.log('HERE4')
