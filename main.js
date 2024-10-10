@@ -16,12 +16,8 @@ function addFood (event){
         listItem.textContent = foodItem;
         finalList.appendChild(listItem);
         console.log('HERE2')
-        const remButton = document.createElement('BUTTON');
+        listItem.addEventListener('click', removeFood, false)
         console.log('HERE3')
-        remButton.addEventListener('click', removeFood())
-        remButton.textContent = "Remove";
-        listItem.append(remButton)
-        console.log('HERE4')
     }
     updateRecipes()
 }
