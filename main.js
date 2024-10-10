@@ -26,10 +26,10 @@ function addFood (event){
     updateRecipes()
 }
 
-function removeFood(clicked) {
+function removeFood(elem) {
     console.log('NO')
 
-
+    console.log(elem)
     clicked.parentNode.remove()
 
     updateRecipes()
