@@ -5,26 +5,42 @@
         <meta charset="utf-8">
         <script type="text/javascript" src="main.js"></script>
         <script type="text/javascript" src="APIConnection.js"></script>
-        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="main2.css">
         <link rel="icon" href="data:;base64,iVBORw0KGgo=">
 
     </head>
-    <body onload="main()">
+    <body>
         <main>
             <h1>Quick Cooks</h1>
         </main>
-        <form>
-            Ingredients in Fridge:
-            <ul>
-            </ul>
-            Add Ingredient: <input type="text" id="newIngredient" value="">
-            <button id="submit">Submit</button>
-        </form>
-        <form2>
-            Recipes:
-            <button id="showRecipes">Show Recipes</button>
-            <ul>
-            </ul>
-        </form2>
+        <div id = 'box'>
+            <div>
+                <div id = 'box'>
+                    <div>
+                        <h2>
+                            Ingredients In Fridge:
+                        </h2>
+                        <ul id = 'ingredient-list'>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>
+                            Add Ingredients
+                        </h3>
+                        <form>
+                            <input type="text" id="newIngredient" placeholder="New Ingredient">
+                            <button id="submit">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class = 'scroll-box'>
+                <h2>
+                    Recipes:
+                </h2>
+                <ul id = 'recipe-list'>
+                </ul>
+            </div>
+        </div>
     </body>
 </html>
