@@ -8,16 +8,19 @@ function addFood (event){
 
     const foodItem = document.querySelector('#newIngredient').value;
     if (foodItem) {
+        console.log('HERE')
         foodList.push(foodItem);
         const finalList = document.getElementById('ingredient-list');
         const listItem = document.createElement('li');
         listItem.textContent = foodItem;
         finalList.appendChild(listItem);
+        console.log('HERE2')
         const remButton = document.createElement('button');
+        console.log('HERE3')
         remButton.onclick = removeFood(remButton);
         remButton.textContent = "Remove";
         listItem.append(remButton)
-        console.log('HERE')
+        console.log('HERE4')
     }
     updateRecipes()
 }
