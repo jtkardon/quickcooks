@@ -7,7 +7,7 @@ function addFood (event){
     console.log('YES')
 
     const foodItem = document.querySelector('#newIngredient').value;
-    if (foodItem) {
+    if (foodList.includes(foodItem) === false) {
         foodList.push(foodItem);
         const finalList = document.getElementById('ingredient-list');
         const listItem = document.createElement('li');
