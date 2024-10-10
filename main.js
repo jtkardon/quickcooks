@@ -24,14 +24,11 @@ function addFood (event){
 
 function removeFood(event) {
 
-    console.log('NO')
-
+    console.log('removing')
     console.log(event.target)
 
-    // gets food item
-    const food = event.target.parentNode
     // removes food item
-    food.remove()
+    event.target.remove()
 
     updateRecipes()
 }
