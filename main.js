@@ -7,30 +7,29 @@ function addFood (event){
     console.log('YES')
 
     const foodItem = document.querySelector('#newIngredient').value;
-    console.log('Yes again')
     if (foodItem) {
-        console.log('HERE')
         foodList.push(foodItem);
         const finalList = document.getElementById('ingredient-list');
         const listItem = document.createElement('li');
         listItem.textContent = foodItem;
         finalList.appendChild(listItem);
-        console.log('HERE2')
         listItem.addEventListener('click', removeFood, false)
-        console.log('HERE3')
     }
     updateRecipes()
 }
 
 function removeFood(event) {
 
-    console.log('removing')
-    console.log(event.target)
+    console.log('removing');
+    console.log(event.target);
+
+    const food = event.target.textContent;
+    foodList.splice(foodList.indexOf(food), 1);
 
     // removes food item
-    event.target.remove()
+    event.target.remove();
 
-    updateRecipes()
+    updateRecipes();
 }
 
 async function updateRecipes(){
