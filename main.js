@@ -51,6 +51,7 @@ async function updateRecipes(){
     }
 
     const recipeList = document.getElementById('recipe-list');
+    //clears out recipe list on update
     while(recipeList.firstChild) {
         recipeList.removeChild(recipeList.firstChild)
     }
