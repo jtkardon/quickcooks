@@ -52,6 +52,9 @@ async function updateRecipes(){
     }
 
     const recipeList = document.getElementById('recipe-list');
+    while(recipeList.firstChild) {
+        recipeList.removeChild(recipeList.firstChild)
+    }
     recipes.forEach(r => {
         
         const listItem = document.createElement('li');
